@@ -1,0 +1,8 @@
+Product_ID,Product_Name,Category,Price,Rating,Review_Text
+101.0,Shoes,Footwear,1200.0,4.5,Good quality
+102.0,shoes ,foot wear,1150.0,,good Quality
+103.0,SHOES,Footwear,,4.8,
+103.0,Shoes,,1200.0,4.8,Good quality
+104.0,Bag,Accessories,500.0,3.0,Average product
+,bag,Accessories,-20.0,5.0,Excellent!!
+106.0,Watch,Accessories,1500.0,200.0,Ok
