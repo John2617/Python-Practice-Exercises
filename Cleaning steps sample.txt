@@ -1,0 +1,125 @@
+🔹 STEP 1 — Load the Dataset
+
+Power BI Desktop → Get Data
+
+Choose Text/CSV → pick your file
+
+Click Transform Data
+
+🔹 STEP 2 — Fix Column Types
+
+Why? Wrong data types cause wrong visuals later.
+
+In Power Query:
+
+Column	Set Type To
+ProductKey	Whole Number
+ProductSubcategoryKey	Whole Number
+ProductCost	Decimal Number
+ProductPrice	Decimal Number
+All text columns	Text
+
+How to do this:
+
+Select column → top ribbon → Data Type.
+
+🔹 STEP 3 — Remove Duplicate Rows
+
+Power BI often imports duplicates.
+
+Go to:
+Home → Remove Rows → Remove Duplicates
+
+Use ProductKey or ProductSKU + ProductName.
+
+🔹 STEP 4 — Clean and Standardize Text
+
+Select all text columns:
+
+ProductName
+
+ModelName
+
+ProductColor
+
+ProductDescription
+
+ProductSKU
+
+Then apply:
+
+4A: Remove unwanted characters
+
+Transform → Format → Clean
+
+4B: Remove extra spaces
+
+Transform → Format → Trim
+
+4C: Apply proper casing
+
+Transform → Format → Capitalize Each Word
+
+🔹 STEP 5 — Handle Missing Values
+
+Your dataset has missing values in:
+
+ProductColor
+
+ProductSize
+
+Replace missing with “Unknown”
+
+Right-click → Replace Values
+
+Find: (null)
+
+Replace: Unknown
+
+Fix ProductSize (important)
+
+Replace:
+
+0 → Unknown
+
+U → Universal
+
+🔹 STEP 6 — Remove Blank Rows
+
+Go to:
+Home → Remove Rows → Remove Blank Rows
+
+🔹 STEP 7 — Check For Outliers (Simple Method)
+
+No DAX needed.
+
+Select ProductPrice column
+
+View → Column Distribution
+
+Identify unusually large or small values
+
+Right-click → Filter to remove the wrong ones
+
+(For example, if a price is extremely high or cost is zero.)
+
+🔹 STEP 8 — Create a Clean Version of the Description (Optional)
+
+If descriptions contain strange spacing:
+
+Transform → Replace Values
+Replace double spaces " " with " ".
+
+Repeat twice.
+
+🔹 STEP 9 — Remove Columns You Don’t Need
+
+This keeps your report clean.
+
+Right-click → Remove Columns
+
+🔹 STEP 10 — Apply Changes
+
+Home → Close & Apply
+
+Your cleaned dataset is now ready for visuals.
